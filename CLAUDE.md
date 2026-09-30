@@ -33,8 +33,9 @@ folder is added, removed, or renamed, update it in the same change.**
 
 ## Status
 
-The pages are written (2026-09-30). The repository is still private and Pages is off: going
-public is the owner's step (the commands below).
+**Live since 2026-09-30:** the repository is public and Pages serves `main` at
+`https://graboosky.github.io/wordsmith-web/`; `index.html`, `privacy.html` and `support.html`
+return 200. A push to `main` is a deploy.
 
 **Stack decided:** plain HTML and CSS, no build step. What is in the repository is exactly
 what is served.
