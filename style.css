@@ -18,6 +18,10 @@
   --space-xl: 2.5rem;
   --radius: 1.25rem;
   --measure: 40rem;
+  --leading-body: 1.55;
+  --leading-title: 1.2;
+  --rule-width: 1px;
+  color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,7 +43,7 @@ body {
   color: var(--text);
   font-family: var(--font-body);
   font-size: var(--size-body);
-  line-height: 1.55;
+  line-height: var(--leading-body);
 }
 
 main {
@@ -51,7 +55,7 @@ main {
 h1 {
   font-family: var(--font-display);
   font-size: var(--size-title);
-  line-height: 1.2;
+  line-height: var(--leading-title);
   margin: 0 0 var(--space-s);
 }
 
@@ -81,9 +85,15 @@ nav {
 }
 
 footer {
-  border-top: 1px solid var(--rule);
-  margin-top: var(--space-xl);
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-m);
+  padding-right: var(--space-m);
+  border-top: var(--rule-width) solid var(--rule);
+  margin-top: 0;
   padding-top: var(--space-m);
+  padding-bottom: var(--space-xl);
   color: var(--text-secondary);
   font-size: var(--size-small);
 }
