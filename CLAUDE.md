@@ -20,7 +20,12 @@ drafts of unreleased features, no internal notes, no credentials.
 ```
 wordsmith-web/
 ├── CLAUDE.md
-└── <TODO: fill in once the site has a shape>
+├── README.md
+├── .nojekyll     Pages serves files as they are
+├── style.css     every colour, size and font, as custom properties
+├── index.html    the landing page
+├── privacy.html  the privacy policy (App Store Connect: Privacy Policy URL)
+└── support.html  support and contact (App Store Connect: Support URL)
 ```
 
 **This tree is the single source of truth for this repository's structure. When a file or
@@ -28,7 +33,8 @@ folder is added, removed, or renamed, update it in the same change.**
 
 ## Status
 
-Nothing is written yet — no pages, no stylesheet. The repository is private.
+The pages are written (2026-09-30). The repository is still private and Pages is off: going
+public is the owner's step (the commands below).
 
 **Stack decided:** plain HTML and CSS, no build step. What is in the repository is exactly
 what is served.
@@ -56,9 +62,13 @@ just the current tree.
 | Support | App Store Connect (Support URL) | every app |
 | Terms of use | App Store Connect | only if Wordsmith sells an auto-renewable subscription — Apple's standard EULA may be linked instead |
 
-<TODO: the file name of each page, once written. A URL pasted into a store listing is
-permanent in practice — renaming a page later means a 404 in front of review and a
-metadata edit in the store.>
+The pages are `privacy.html` and `support.html`; the terms are Apple's standard EULA, linked from
+the paywall. **These names are permanent**: a URL pasted into a store listing is permanent in
+practice — renaming a page later means a 404 in front of review and a metadata edit in the
+store. The app links them from `wordsmith-ios/Wordsmith/service/account/WordsmithLinks.swift`.
+
+The privacy policy is written from `../docs/domain.md` *What stays on the phone, and what leaves
+it*. Contact is through this repository's GitHub Issues until the owner chooses an address.
 
 **The privacy policy must say what the app actually does with what the user gives it** —
 above all the voice: whether speech is recorded, whether it is recognized on the device or
